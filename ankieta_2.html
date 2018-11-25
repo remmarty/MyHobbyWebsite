@@ -19,9 +19,7 @@
 			  	</ul>
 			  </div>
             <div class="dropdown">
-              <button class="dropbtn">Ankiety
-                <i class="fa fa-caret-down"></i>
-              </button>
+              <button class="dropbtn">Ankiety</button>
               <div class="dropdown-content">
                 <a href="ankieta_1.html">Ankieta o grach</a>
                 <a href="ankieta_2.html">Ankieta o książkach</a>
@@ -30,12 +28,13 @@
           </nav>
           <article>
             <form action="mailto:remi.martyniak@linux.pl" method="post">
+			<h2>Ankieta dotycząca książek:</h2>
                <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                Imię używając wielkich liter: <input type="text" required pattern="[A-Z]"><br>
-                Nazwisko używając małych liter: <input type="text" required pattern="[a-z]"><br>
+                Imię używając wielkich liter: <input type="text" required pattern="[A-Z]{3,10}"><br>
+                Nazwisko używając małych liter: <input type="text" required pattern="[a-z]{3,12}"><br>
                 Numer telefonu używając cyfr od 0 do 5: <input type="text" required pattern="[0-5]{9}"><br>
                 Duis aute irure dolor: <input type="text"><br>
                 Wiek: <input type="text" required pattern="[0-9]{2}"><br>

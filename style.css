@@ -114,10 +114,14 @@ div.desc {
 
 .dropdown {
 	float: left;
-	overflow: hidden;
 	
 }
 
+button.dropbtn{
+	width:80px;
+	padding-left: 10px;
+
+}	
 
 .dropdown .dropbtn {
     font-size: 16px;
@@ -126,6 +130,8 @@ div.desc {
     color: white;
     background-color: inherit;
     font-family: inherit;
+	position:relative;
+	bottom:10px;
 	
 	}
 
