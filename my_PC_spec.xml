@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="bestxsd.xsd"?>
+
+<my_computer_spec>
+
+  <graphic_card name="GTX 1050">
+    <price>$174</price>
+    <website>https://www.nvidia.com/en-us/geforce/products/10series/geforce-gtx-1050/</website>
+    <memory>4gb gddr5</memory>
+    <nvidia_cuda_cores>768</nvidia_cuda_cores>
+    <boost_clock>1392 Mhz</boost_clock>
+    <memory_bandwidth>112</memory_bandwidth>
+    <image source="img/graphic_card.jpg"></image>
+  </graphic_card>
+  
+  <processor name="Intel i5-7300HQ">
+    <price>$211</price>
+    <website>https://ark.intel.com/products/97456/Intel-Core-i5-7300HQ-Processor-6M-Cache-up-to-3-50-GHz-</website>
+    <processor_base_frequency>2.50 </processor_base_frequency>
+    <max_frequency>3.50</max_frequency>
+    <cache>6 MB</cache>
+    <image source="img/processor.jpg"></image>
+    <number_of>
+      <cores>4</cores>
+      <threads>4</threads>
+    </number_of>
+  </processor>
+  
+  <RAM name="HyperX Predator">
+    <price>$178</price>
+    <website>https://www.hyperxgaming.com/us/memory/fury-DDR4</website>
+    <capacity>16bg ddr4</capacity>
+    <speed>3200 Mhz</speed>
+    <voltage>1.35</voltage>
+    <image source="img/RAM.jpg"></image>
+  </RAM>
+  
+  <hard_drive name="Samsung 860 Evo">
+    <price>$164</price>
+    <website>https://www.samsung.com/semiconductor/minisite/ssd/product/consumer/860evo/</website>
+    <capacity>500 GB</capacity>
+    <sequential_read>550 MB/s</sequential_read>
+    <sequential_write>520 Mb/s</sequential_write>
+    <image source="img/hard_drive.jpg"></image>
+  </hard_drive>
+  
+  <PSU name="Corsair CX750M">
+    <price>$70</price>
+    <website>https://www.corsair.com/us/en/Power/cxm-series-2015-config/p/CP-9020061-NA</website>
+    <power>750W</power>
+    <image source="img/PSU.jpg"></image>
+    <standard>PVX</standard>
+  </PSU>
+  
+  <motherboard model="MSI-B360MX">
+    <price>$116</price>
+    <website>https://www.msi.com/Motherboards</website>
+    <socket>LGA 1151</socket>
+    <image source="img/motherboard.jpg"></image>
+  </motherboard>
+  
+</my_computer_spec>

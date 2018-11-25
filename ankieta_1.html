@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="pl">
     <head>
@@ -10,13 +10,15 @@
        <header>
           <h2>Moje hobby</h2>
        </header>
-        <section>
+        
           <nav>
-            <ul>
-              <li><a href="główna.html">Strona główna</a></li>
-              <li><a href="galeria.html">Galeria zdjęć</a></li>
-
-              <div class="dropdown">
+			  <div class="menu">
+			  	<ul>
+			  		<li><a href="index.html">Strona główna</a></li>
+			  		<li><a href="galeria.html">Galeria zdjęć</a></li>
+			  	</ul>
+			  </div>
+            <div class="dropdown">
               <button class="dropbtn">Ankiety
                 <i class="fa fa-caret-down"></i>
               </button>
@@ -25,29 +27,29 @@
                 <a href="ankieta_2.html">Ankieta o książkach</a>
               </div>
             </div>
-            </ul>
           </nav>
-          <article>
-            <form action="mailto:remi.martyniak@linux.pl" method="post">
-               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-               Imię używając wielkich liter: <input type="text" required password="[A-Z]+"><br>
-               Nazwisko używając małych liter: <input type="text" required pattern="[a-z]+"><br>
-               Numer telefonu używając cyfr od 0 do 5: <input type="text" required pattern="[0-5]+"><br>
-               Aute irure dolor: <input type="text"><br>
-               Ut enim ad minim veniam: <input type="text"><br>
-               Dolor in reprehenderit: <input type="text"><br>
-               Ut enim ad irure dolor: <input type="text"><br>
-               <input type="reset" value="Reset">
+		  <article>
+		  	<form action="mailto:remi.martyniak@linux.pl" method="post">
+		  		<p>
+		  			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+		  			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		  			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		  		</p>
+		  		Imię używając wielkich liter: <input type="text" required pattern="[A-Z]+"><br>
+		  		Nazwisko używając małych liter: <input type="text" required pattern="[a-z]+"><br>
+		  		Numer telefonu używając cyfr od 0 do 5: <input type="text" required pattern="[0-5]{9}"><br>
+		  		Aute irure dolor: <input type="text"><br>
+		  		Twój PIN: <input type="text" required pattern="[0-9]{4}"><br>
+		  		Dolor in reprehenderit: <input type="text"><br>
+		  		Ut enim ad irure dolor: <input type="text"><br>
+		  		<input type="reset" value="Reset">
+		  		<input type="submit" value="Wyślij">
+		  	</form>
 
+		  </article>
 
-               <input type="submit" value="Wyślij">
-             </form>
-          </article>
-        </section>
         <footer>
-          <p>Remigiusz Martyniak
+          <p>Remigiusz Martyniak<br>26-11-2018<br/>
             <a href="mailto:remi.martyniak@linux.pl"> Wyślij do mnie E-maila </a>
           </p>
         </footer>

@@ -1,0 +1,165 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xlink="https://www.w3schools.org/1999/xlink">
+  
+
+  <xs:element name="my_computer_spec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="graphic_card" type="graphic_cardType" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="processor" type="processorType" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="RAM" type="RAMType" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="hard_drive" type="hard_driveType" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="PSU" type="PSUType" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="motherboard" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="price" type="xs:string"/>
+              <xs:element name="website" type="websiteType"/>
+              <xs:element name="socket" type="xs:string"/>
+              <xs:element name="image" type="imageType"/>
+            </xs:sequence>
+            <xs:attribute name="model" type="modelType"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  
+  <xs:complexType name="graphic_cardType">
+    <xs:complexContent>
+      <xs:extension base="price_and_website">
+        <xs:sequence>
+          <xs:element name="memory" type="xs:string"/>
+          <xs:element name="nvidia_cuda_cores" type="xs:integer"/>
+          <xs:element name="boost_clock" type="xs:string"/>
+          <xs:element name="memory_bandwidth" type="xs:integer"/>
+          <xs:element name="image" type="imageType"/>
+        </xs:sequence>
+         <xs:attribute name="name"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="processorType">
+    <xs:sequence>
+      <xs:element name="price" type="xs:string"/>
+      <xs:element name="website" type="websiteType"/>
+      <xs:element name="processor_base_frequency" type="xs:float"/>
+      <xs:element name="max_frequency" type="xs:double"/>
+      <xs:element name="cache" type="xs:string"/>
+      <xs:element name="image" type="imageType"/>
+      <xs:element name="number_of" type="number_ofType"/>
+    </xs:sequence>
+    <xs:attribute name="name"/>
+  </xs:complexType>
+
+  <xs:simpleType name="number_valueType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="number_ofType">
+    <xs:sequence>
+      <xs:element name="cores" type="number_valueType"/>
+      <xs:element name="threads" type="number_valueType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="RAMType">
+    <xs:sequence>
+      <xs:element name="price" type="xs:string"/>
+      <xs:element name="website" type="websiteType"/>
+      <xs:element name="capacity" type="xs:string"/>
+      <xs:element name="speed" type="xs:string"/>
+      <xs:element name="voltage" type="xs:decimal"/>
+      <xs:element name="image" type="imageType"/>
+    </xs:sequence>
+    <xs:attribute name="name"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="hard_driveType">
+    <xs:sequence>
+      <xs:element name="price" type="xs:string"/>
+      <xs:element name="website" type="websiteType"/>
+      <xs:element name="capacity" type="xs:string"/>
+      <xs:element name="sequential_read" type="xs:string"/>
+      <xs:element name="sequential_write" type="xs:string"/>
+      <xs:element name="image" type="imageType"/>
+    </xs:sequence>
+    <xs:attribute name="name"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="PSUType">
+    <xs:sequence>
+      <xs:group ref="PSU_group"/>
+    </xs:sequence>
+    <xs:attribute name="name"/>
+  </xs:complexType>
+
+
+  <xs:group name="PSU_group">
+    <xs:sequence>
+      <xs:element name="price" type="xs:string"/>
+      <xs:element name="website" type="websiteType"/>
+      <xs:element name="power" type="xs:string"/>
+      <xs:element name="image" type="imageType"/>
+      <xs:element name="standard" type="standardType"/>
+    </xs:sequence>
+  </xs:group>
+
+
+  <xs:simpleType name="standardType">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="PVX"/>
+          <xs:enumeration value="TVX"/>
+          <xs:enumeration value="THX"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[A-Z]{3}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="modelType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="4"/>
+      <xs:maxLength value="20"/>
+      <xs:pattern value="MSI-[A-Z0-9]{5,10}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="price_and_website">
+    <xs:sequence>
+      <xs:element name="price" type="xs:string"/>
+      <xs:element name="website" type="websiteType"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  
+
+  <xs:simpleType name="websiteType">
+      <xs:restriction base="xs:string">
+        <xs:minLength value="8"/>
+        <xs:maxLength value="200"/>
+        <xs:pattern value="https.*" />
+      </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="imageType">
+    <xs:attribute name="source" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+</xs:schema>
+

@@ -1,0 +1,7 @@
+<svg xmlns='http://www.w3.org/2000/svg' class="svg_graphic"/>
+		<svg>
+			<rect width="1350" height="30"/>
+			<animate attributeName="width" begin="0s" dur="4s" fill="freeze" values="15;1350;30" repeatCount="indefinite" />
+			<animate attributeName="height" begin="0s" dur="4s" fill="freeze" values="16;130;16" repeatCount="indefinite" />
+			<animate attributeName="fill" begin="0s" dur="4s" fill="freeze" values="red;black;blue;red" repeatCount="indefinite" />
+		</svg>

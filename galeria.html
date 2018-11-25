@@ -1,98 +1,117 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="pl">
-    <head>
-        <title>Moje hobby</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css" type="text/css" />
-    </head>
-    <body>
-       <header>
-          <h2>Moje hobby</h2>
-       </header>
-          <nav>
-            <ul>
-              <li><a href="główna.html">Strona główna</a></li>
-              <li><a href="galeria.html">Galeria zdjęć</a></li>
-              <div class="dropdown">
-              <button class="dropbtn">Ankiety
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="ankieta_1.html">Ankieta o grach</a>
-                <a href="ankieta_2.html">Ankieta o książkach</a>
-              </div>
-            </div>
-            </ul>
-          </nav>
-          <article>
-            <div class="gallery">
-                <a target="_blank"href="witcher.jpg">
-                  <img src="images/witcher.jpg">
-                </a>
-              <div class="desc">Witcher 3: Wild Hunt</div>
-            </div>
 
-            <div class="gallery">
-                <a target="_blank" href="la-noire.jpg">
-                  <img src="images/la-noire.jpg">
-                </a>
-              <div class="desc">L.A. Noire</div>
-            </div>
+<head>
+  <title>Moje hobby</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
 
-            <div class="gallery">
-                <a target="_blank" href="dishonored.jpg">
-                  <img src="images/dishonored.jpg">
-                </a>
-              <div class="desc">Dishonored</div>
-            </div>
+<body>
+  <header>
+    <h2>Moje hobby</h2>
+  </header>
+  <nav>
+	  <div class="menu">
+	  	<ul>
+	  		<li><a href="index.html">Strona główna</a></li>
+	  		<li><a href="galeria.html">Galeria zdjęć</a></li>
+	  	</ul>
+	  </div>
+    <div class="dropdown">
+      <button class="dropbtn">Ankiety
+        <!-- <i class="fa fa-caret-down"></i> -->
+      </button>
+      <div class="dropdown-content">
+        <a href="ankieta_1.html">Ankieta o grach</a>
+        <a href="ankieta_2.html">Ankieta o książkach</a>
+      </div>
+    </div>
+  </nav>
 
-            <div class="gallery">
-                <a target="_blank" href="crysis.jpg">
-                  <img src="images/crysis.jpg">
-                </a>
-              <div class="desc">Crysis</div>
-            </div>
+  <article>
+  	<!-- <div> -->
 
-            <div class="gallery">
-                <a target="_blank" href="gothic.jpg">
-                  <img src="images/gothic.jpg">
-                </a>
-              <div class="desc">Gothic 2</div>
-            </div>
-              <div class="gallery">
-                  <a target="_blank" href="tf2.jpg">
-                    <img src="images/tf2.jpg">
-                  </a>
-                <div class="desc">Team Fortress 2</div>
-              </div>
 
-                <div class="gallery">
-                    <a target="_blank" href="cuphead.jpg">
-                      <img src="images/cuphead.jpg">
-                    </a>
-                  <div class="desc">Cuphead</div>
-                </div>
+  	<div class="gallery">
+  		<a target="_blank" href="images/witcher.jpg">
+  			<img src="images/witcher.jpg" alt="Witcher">
+  		</a>
+  		<div class="desc">Witcher 3: Wild Hunt</div>
+  	</div>
 
-                  <div class="gallery">
-                      <a target="_blank" href="dirt.jpg">
-                        <img src="images/dirt.jpg">
-                      </a>
-                    <div class="desc">Dirt Rally</div>
-                  </div>
+  	<div class="gallery">
+  		<a target="_blank" href="images/la-noire.jpg">
+  			<img src="images/la-noire.jpg" alt="L.A. Noire">
+  		</a>
+  		<div class="desc">L.A. Noire</div>
+  	</div>
 
-                  <div class="gallery">
-                      <a target="_blank" href="mafia.jpg">
-                        <img src="images/mafia.jpg">
-                      </a>
-                    <div class="desc">Mafia</div>
-                </div>
-          </div>
-          </article>
-        <footer>
-          <p>Remigiusz Martyniak
-            <a href="mailto:remi.martyniak@linux.pl"> Wyślij do mnie E-maila </a>
-         </p>
-        </footer>
-    </body>
+  	<div class="gallery">
+  		<a target="_blank" href="images/dishonored.jpg">
+  			<img src="images/dishonored.jpg" alt="Dishonored">
+  		</a>
+  		<div class="desc">Dishonored</div>
+  	</div>
+
+  	<div class="gallery">
+  		<a target="_blank" href="images/crysis.jpg">
+  			<img src="images/crysis.jpg" alt="Crysis">
+  		</a>
+  		<div class="desc">Crysis</div>
+  	</div>
+
+  	<div class="gallery">
+  		<a target="_blank" href="images/gothic.jpg">
+  			<img src="images/gothic.jpg" alt="Gothic">
+  		</a>
+  		<div class="desc">Gothic 2</div>
+  	</div>
+
+  	<div class="gallery">
+  		<a target="_blank" href="images/tf2.jpg">
+  			<img src="images/tf2.jpg" alt="TF2">
+  		</a>
+  		<div class="desc">Team Fortress 2</div>
+  	</div>
+
+  	<div class="gallery">
+  		<a target="_blank" href="images/cuphead.jpg">
+  			<img src="images/cuphead.jpg" alt="Cuphead">
+  		</a>
+  		<div class="desc">Cuphead</div>
+  	</div>
+
+  	<div class="gallery">
+  		<a target="_blank" href="images/dirt.jpg">
+  			<img src="images/dirt.jpg" alt="Dirt">
+  		</a>
+  		<div class="desc">Dirt Rally</div>
+  	</div>
+
+  	<div class="gallery">
+  		<a target="_blank" href="images/mafia.jpg">
+  			<img src="images/mafia.jpg" alt="Mafia">
+  		</a>
+  		<div class="desc">Mafia</div>
+  	</div>
+
+  	<svg xmlns='http://www.w3.org/2000/svg' class="svg_graphic" />
+	<svg>
+		<rect width="1350" height="30" />
+		<animate attributeName="width" begin="0s" dur="4s" fill="freeze" values="15;1350;30" repeatCount="indefinite" />
+		<animate attributeName="height" begin="0s" dur="4s" fill="freeze" values="16;130;16" repeatCount="indefinite" />
+		<animate attributeName="fill" begin="0s" dur="4s" fill="freeze" values="red;black;blue;red" repeatCount="indefinite" />
+	</svg>
+
+  </article>
+  <footer>
+  	 <p>
+  		Remigiusz Martyniak<br>26-11-2018<br />
+  		<a href="mailto:remi.martyniak@linux.pl"> Wyślij do mnie E-maila </a>
+  	</p>
+  </footer>
+</body>
+
 </html>
